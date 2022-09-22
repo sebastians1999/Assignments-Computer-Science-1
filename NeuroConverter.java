@@ -1,4 +1,4 @@
-package Assignments;
+
 import java.util.Scanner;
 //import java.math.*;
 public class NeuroConverter {
