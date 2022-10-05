@@ -37,9 +37,9 @@ public class MatrixMult {
         else{
         double [][] product = new double[firstMatrix.length][secondMatrix[0].length];           //creating an array with the right length and heigth for the product of the two Matrixes
          
-         for(int r=0; r < firstMatrix.length; r++){  //runs the rows of Matrix A and the product (storage for product)
-                for(int b=0; b < secondMatrix[0].length; b++){     //runs the columns of Matrix B and product                 
-                    for(int c=0; c < secondMatrix.length; c++){     //for itterating through every value of the columns or rows        
+         for(int r=0; r < firstMatrix.length; r++){                                           //runs the rows of Matrix A and the product (storage for product)
+                for(int b=0; b < secondMatrix[0].length; b++){                              //runs the columns of Matrix B and product                 
+                    for(int c=0; c < secondMatrix.length; c++){                             //for itterating through every value of the columns or rows        
                        product[r][b]+=firstMatrix[r][c]*secondMatrix[c][b];                 
                     }
                 }
