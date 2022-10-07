@@ -6,7 +6,8 @@ public class count_0to10 {
 
     public static void main(String[] args) {
 
-        print010(0);
+        int i=0;
+        print010(i);
 
     
 
@@ -20,7 +21,7 @@ public class count_0to10 {
         }
         else{
             System.out.println(i);
-            return print010(i++);
+            return print010(++i);
         }
 
     }
