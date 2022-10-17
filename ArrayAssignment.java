@@ -26,20 +26,28 @@ public class ArrayAssignment{
     public static int allNumsWithin(int[] A, int k) {
         return 0;
     }
-    public static void diagonalPrint(int[][] M) {
-        for(int a = 0; a < M.length; a++){
-            for(int b = 0; b <= a;b++){  // a = 1
-                System.out.println(M[Math.abs(a-b)][b]);
-            }
-        }
-        int i = M.length;
-        
-        for(int c = 1; c <= M[0].length; c++){
-            for(int d = c; d < M[0].length; d++){
-                //System.out.println(M[Math.abs(i-d)][d]);
-            }
-            i++;
-         }
 
+
+    public static void diagonalPrint(int[][] M) {
+        
+            for(int a = 0; a < M.length; a++){
+                int c = 0;
+                for(int b = a; b >= 0;b--){
+                    System.out.println(M[b][c]);
+                    c++;
+                }
+                }
+        
+        
+            for(int c = 1; c <= M[0].length-1; c++){
+              int a = c;
+              int b = M.length-1;
+
+               while(a<=M[0].length-1 && b >= 0){
+                   System.out.println(M[b][a]);
+                  a++;
+                 b--;
+              }
+            }   
     }
 }

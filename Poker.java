@@ -52,7 +52,7 @@ class Poker{
         }
         //one for looop is allowed fucaacck
         else{
-            if(initialCards(n)equaln)
+           return initialCards;
         }
 
 
