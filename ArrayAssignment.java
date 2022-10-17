@@ -33,18 +33,16 @@ public class ArrayAssignment{
             for(int a = 0; a < M.length; a++){
                 int c = 0;
                 for(int b = a; b >= 0;b--){
-                    System.out.println(M[b][c]);
+                    System.out.print(" "+ M[b][c]);
                     c++;
                 }
                 }
-        
-        
             for(int c = 1; c <= M[0].length-1; c++){
               int a = c;
               int b = M.length-1;
 
                while(a<=M[0].length-1 && b >= 0){
-                   System.out.println(M[b][a]);
+                   System.out.print(" "+ M[b][a]);
                   a++;
                  b--;
               }
