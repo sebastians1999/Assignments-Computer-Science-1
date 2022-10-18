@@ -16,15 +16,18 @@ public class ArrayAssignment{
                               {4, 8, 12, 16, 19},
                               {7, 11, 15, 18, 20}};
     
-    int [][]        Matrix = {{1, 3, 5, 7, 9},
-                              {2, 4, 6, 8, 10}};
+    int [][]        Matrix = {{1, 3},
+                              {2, 5},
+                              {4, 7},
+                              {6, 9},
+                              {8, 10}};
                               
 
 
-    int Array[] = {0,2,0,2,0,2,2,1,1,0};
+    int Array[] = {1,0,0,0,2,3,4,5,6,7,8};
     
     //diagonalPrint(Matrix);
-    System.out.println(allNumsWithin(Array, 3));
+    System.out.println(allNumsWithin(Array, 9));
 
 
     }
@@ -32,17 +35,18 @@ public class ArrayAssignment{
     public static int allNumsWithin(int[] A, int k) {
        
         //two base cases
-        //would be the smallest possible AllNumsWithin List
+        //would be the smallest possible Array of AllNumsWithin 
         if(A.length<k){
-            return A.length;
-        }   
+            return 0;
+        }
+       
         
-        //checking whether all numbers are there
+        //checking whether all numbers are there  //contains
         boolean[] check = new boolean[k];
         for(int a = 0; a < A.length;a++){
             check[A[a]]=true;
         }
-
+        
         
 
         //if not we return 0
@@ -51,7 +55,7 @@ public class ArrayAssignment{
                 return 0;
             }
         }
-        
+
         //creating new arrays with new boundaries
         int[] TestLeftSideArray = new int[A.length-1];
         int[] TestRightSideArray = new int[A.length-1];
@@ -80,20 +84,27 @@ public class ArrayAssignment{
     }
 
 
+
+
+
+
     public static void diagonalPrint(int[][] M) {
         
             for(int a = 0; a < M.length; a++){
+                //to iterate through columns
                 int c = 0;
-                for(int b = a; b >= 0;b--){
+                //b counts down from its row 
+                //c < M[0].length makes sure to stop early enough (or we could get an error out of bounds)
+                for(int b = a; b >= 0 && c < M[0].length ;b--){
                     System.out.print(" "+ M[b][c]);
                     c++;
                 }
                 }
             for(int c = 1; c <= M[0].length-1; c++){
-              int a = c;
-              int b = M.length-1;
+                int a = c;
+                int b = M.length-1;
 
-               while(a<=M[0].length-1 && b >= 0){
+                while(a<=M[0].length-1 && b >= 0){
                    System.out.print(" "+ M[b][a]);
                   a++;
                  b--;
